@@ -6,10 +6,10 @@ const notes = [100, 50, 20, 10, 5, 2, 1]
 
 console.log(value)
 
-for (const note of notes) {
+for (let i = 0; i < notes.length; i++) {
 
-  const notesToGive = parseInt(value / note)
-  console.log(`${notesToGive} nota(s) de R$ ${note},00`)
-  value = value % note
+  const notesToGive = parseInt(value / notes[i])
+  console.log(`${notesToGive} nota(s) de R$ ${notes[i]},00`)
+  value = value % notes[i]
   
 }
