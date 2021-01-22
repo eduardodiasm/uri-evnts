@@ -1,3 +1,6 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
 function getSurvivor (people, salt) {
 
   let remaining = 0
@@ -9,16 +12,6 @@ function getSurvivor (people, salt) {
   return remaining
 
 }
-
-const lines = [
-  "6",
-  "1 1",
-  "10000 1000",
-  "1 1000",
-  "10000 1",
-  "10000 2",
-  "10000 3",
-]
 
 const values = lines
   .map(line => line.split(" ")
@@ -34,5 +27,5 @@ for (let i = 1; i <= n; i++) {
 
   const survivor = getSurvivor(people, salt)
 
-  console.log(`Case ${i + 1}: ${survivor + 1}`)
+  console.log(`Case ${i}: ${survivor + 1}`)
 }
